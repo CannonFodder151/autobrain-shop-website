@@ -8,7 +8,11 @@ repair shops, with the digital customer approval wedge. Private, SaaS-only.
 Plain static site (HTML/CSS/JS) following the AutoBrain design language
 (Orbitron + Exo 2, cyan-on-dark grid theme, shared `logo.png`).
 
-- `index.html` — landing page: features, how it works, pricing (Starter / Pro / Fleet), FAQ, contact
+- `index.html` — home / landing: hero, coming-soon badge, waitlist CTA, summary
+- `features.html` — full feature set
+- `pricing.html` — Solo AU$30/mo, Team AU$120/mo, Multi-site on enquiry (annual: pay 11 months)
+- `faq.html` — frequently asked questions
+- `contact.html` — waitlist form (pre-launch) + mailto sales@autobrainservice.app
 - `privacy.html` — privacy policy (draft)
 - `styles.css` — design system
 - `nav.js` — theme toggle + mobile nav
