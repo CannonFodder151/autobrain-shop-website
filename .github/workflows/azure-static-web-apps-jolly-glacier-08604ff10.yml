@@ -10,13 +10,35 @@ on:
       - main
 
 jobs:
-  build_and_deploy_job:
-    if: (github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')) && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+  validate_site_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: [self-hosted, linux, x64]
+    name: Validate site
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: false
+      - name: Validate static site assets
+        run: |
+          set -euo pipefail
+          for f in index features pricing faq contact privacy; do
+            [ -f "$f.html" ] || { echo "missing $f.html"; exit 1; }
+          done
+          [ -f styles.css ] || { echo "missing styles.css"; exit 1; }
+          [ -f nav.js ] || { echo "missing nav.js"; exit 1; }
+          grep -q '<html' index.html
+          echo "site assets OK"
+
+  deploy_job:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: [self-hosted, linux, x64]
     name: Build and Deploy Job
     permissions:
-       id-token: write
-       contents: read
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
@@ -37,7 +59,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
-    if: (github.event_name == 'pull_request' && github.event.action == 'closed') && (github.event.pull_request.head.repo.full_name == github.repository)
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: [self-hosted, linux, x64]
     name: Close Pull Request Job
     steps:
