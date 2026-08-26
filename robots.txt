@@ -1,4 +1,4 @@
+# AutoBrain Shop robots.txt
 User-agent: *
 Allow: /
-
 Sitemap: https://shop.autobrainservice.app/sitemap.xml
