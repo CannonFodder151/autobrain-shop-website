@@ -17,10 +17,13 @@
 <meta name="twitter:description" content="The workshop app where your customers see the work and approve it with a tap.">
 <link rel="canonical" href="https://shop.autobrainservice.app/">
 <meta property="og:url" content="https://shop.autobrainservice.app/">
-<meta property="og:image" content="https://autobrainservice.app/assets/og-image.png">
+<meta property="og:image" content="https://shop.autobrainservice.app/assets/og-shop.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta name="twitter:image" content="https://autobrainservice.app/assets/og-image.png">
+<meta name="twitter:image" content="https://shop.autobrainservice.app/assets/og-shop.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,7 +34,8 @@
       "name": "AutoBrain Shop",
       "url": "https://shop.autobrainservice.app/",
       "logo": { "@type": "ImageObject", "url": "https://shop.autobrainservice.app/assets/logo.png" },
-      "email": "sales@autobrainservice.app"
+      "email": "sales@autobrainservice.app",
+      "sameAs": ["https://github.com/CannonFodder151/autobrain", "https://www.facebook.com/people/AutoBrain/61593071546666/"]
     },
     {
       "@type": "WebSite",
@@ -53,28 +57,59 @@
       ]
     },
     {
+      "@type": "LocalBusiness",
+      "@id": "https://shop.autobrainservice.app/#localbusiness",
+      "name": "AutoBrain Shop",
+      "url": "https://shop.autobrainservice.app/",
+      "email": "sales@autobrainservice.app",
+      "description": "Workshop management software for Australian independent repair shops: job cards, estimates, invoicing, POS, digital customer approval and AU rego lookup.",
+      "knowsAbout": ["workshop management software", "auto repair shop software", "mechanic software Australia", "digital customer approval", "AU rego lookup", "job card software"],
+      "areaServed": { "@type": "Country", "name": "Australia" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shop.autobrainservice.app/" }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://shop.autobrainservice.app/#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Is there a free trial?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every plan starts with a 14-day free trial and there are no lock-in contracts." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every plan starts with a 14-day free trial — no credit card required. There are no lock-in contracts, so you can cancel any time." }
         },
         {
           "@type": "Question",
-          "name": "How does the customer approval work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "When a job is ready, your customer logs into a secure portal, sees the fault photos and the itemised work order with price, and approves it digitally with a signed, timestamped approval that is kept in your audit trail." }
+          "name": "How does the digital customer approval work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "When a job is ready, your customer logs into the portal and sees the fault photos and itemised work order with the price. They approve with a tap. The approval is signed, timestamped and kept in the job's audit trail — so you're covered before you start the work." }
         },
         {
           "@type": "Question",
-          "name": "Does it work with Australian number plates?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enter a registration number and AutoBrain Shop pre-fills the vehicle details via the built-in Australian rego lookup." }
+          "name": "Does AutoBrain Shop work with Australian number plates?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Type a registration number and the vehicle details are pre-filled via the built-in Australian rego lookup — less typing, fewer mistakes at the counter." }
         },
         {
           "@type": "Question",
           "name": "Can I take payments at the counter?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Convert any estimate into an invoice and take payment by card, bank transfer or PayTo at the counter." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Convert any estimate into an invoice and take payment at the counter by card, bank transfer or PayTo." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work for mobile mechanics and auto electricians?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. AutoBrain Shop is mobile-first — works on phones and tablets for mobile mechanics, auto electricians, tyre fiters and any on-site repairer. The customer portal is optimised for phones too." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it integrate with my existing workshop tools?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Pro plan includes Xero export (BAS-ready) and SMS / email links for estimates. We are expanding integrations based on workshop feedback — contact sales@autobrainservice.app to request a specific integration." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AutoBrain Shop made in Australia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. AutoBrain is built by Perfection IT Services (ABN 25 839 782 423) in Australia. The rego lookup, pricing in AUD, ABN display and BAS-ready Xero export are all built for Australian workshops from day one." }
         }
       ]
     }
@@ -82,9 +117,6 @@
 }
 </script>
 <link rel="canonical" href="https://shop.autobrainservice.app/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="alternate" hreflang="en-AU" href="https://shop.autobrainservice.app/">
 <link rel="alternate" hreflang="x-default" href="https://shop.autobrainservice.app/">
