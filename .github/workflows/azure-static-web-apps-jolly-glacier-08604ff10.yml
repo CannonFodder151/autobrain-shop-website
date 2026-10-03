@@ -20,6 +20,8 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: SEO check
+        run: python3 scripts/seo-check.py
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
